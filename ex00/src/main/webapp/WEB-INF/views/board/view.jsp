@@ -29,6 +29,8 @@ $(function(){
 	console.log("JS Reply List repPerPageNum : " + repPerPageNum);
 	
 	replyService.list(
+			
+			//넘겨줄데이터
 			{no:no, page:repPage, perPageNum:repPerPageNum},
 			//성공했을때의 함수
 			function(list){
@@ -82,6 +84,8 @@ $(function(){
 				<a href="list.do" class="btn btn-default">리스트</a>
 		</tr>
 	</table>
+	
+	
 </div>
 </body>
 </html>
