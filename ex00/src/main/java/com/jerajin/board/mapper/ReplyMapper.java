@@ -26,4 +26,7 @@ public interface ReplyMapper {
 	//댓글 삭제
 	public int delete(ReplyVO vo);
 	
+	//총 댓글 수
+	public long getTotalRow(Long no);
+	
 }

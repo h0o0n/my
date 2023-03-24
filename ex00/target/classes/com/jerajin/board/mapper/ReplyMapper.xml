@@ -16,7 +16,7 @@
 				order by rno desc
 			)
 		)
-		where rnum between 1 and 5
+		where rnum between #{pageObject.startRow} and #{pageObject.endRow}
 	</select>
 
 	<select id="getTotalRow" resultType="java.lang.Long">

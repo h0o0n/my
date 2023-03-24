@@ -30,9 +30,11 @@ public class ReplyServiceImpl implements ReplyService {
 	@Override
 	public List<ReplyVO> list(PageObject pageObject, Long no) throws Exception {
 		// TODO Auto-generated method stub
+		pageObject.setTotalRow(mapper.getTotalRow(no));
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("pageObject", pageObject);
 		map.put("no", no);
+		
 		return mapper.list(map);
 	}
 

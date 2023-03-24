@@ -18,7 +18,7 @@
  			// Ajax를 이용한 데이터 가져오기
  			$.getJSON(
  				// ajax를 호출할 url
- 				"/replies/list.do?no=" + no,
+ 				"/replies/list.do?no=" + no + "&repPage=" + page + "&repPerPageNum=" + perPageNum,
  				function(data){
  					//callback : 데이터를 가져오면 처리하는 함수 
  					console.log(data);
@@ -31,9 +31,12 @@
 				function(xhr, status, err){
 					if(error){
 						error();
+					}else{
+					// {}, [] 구조면 ok
+						alert(err);
 					}
 			}
-			); // getJSON 끝단
+			); // getSJON 끝단
  		} //list 끝단
  		return{
  			//replyService.list(param.callback)
@@ -41,5 +44,5 @@
  		}
  	}
  )();
- console.log(replyService);
+
  
