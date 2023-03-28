@@ -8,6 +8,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.jerajin.member.service.MemberService;
 import com.jerajin.member.vo.MemberVO;
@@ -53,5 +55,14 @@ public class MemberController {
 		session.setAttribute("sessionId", vo.getId());
 		
 		return "redirect:/board/list.do";
+	}
+	
+	@PostMapping("/idCheck")
+	@ResponseBody
+	public int idCheck(@RequestParam("id") String id) {
+		
+		int cnt = service.idCheck(id);
+		//System.out.println("idcheck :" + cnt); 데이터 넘어오는지 확인
+		return cnt;
 	}
 }

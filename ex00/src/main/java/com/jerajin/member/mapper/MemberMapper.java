@@ -9,4 +9,6 @@ public interface MemberMapper {
 	
 	//로그인처리
 	public MemberVO login(MemberVO vo);
+
+	public int checkId(String id);
 }

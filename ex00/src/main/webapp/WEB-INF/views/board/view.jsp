@@ -2,7 +2,7 @@
 pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<%@ taglib prefix="pageObject" tagdir="/WEB-INF/tags" %>
+<%@ taglib prefix="pageObject" tagdir="/WEB-INF/tags/" %>
 
 <!-- bootstrap 라이브러리 등록 - CDN 방식 : sitemesh에서 decorator.jsp에서 한꺼번에 해결-->
 
@@ -23,9 +23,11 @@ ul.chat > li{
 }
 </style>
 
-
+<script type="text/javascript" src="/js/util.js"></script>
 <!--  reply -->
 <script type="text/javascript" src="/js/reply.js"></script>
+
+
 <script>
 $(function(){
 	console.log("==========================================");
@@ -71,7 +73,10 @@ $(function(){
 					}
 				}
 				replyUL.html(str);
-			}
+				//댓글의 페이지네이션
+				var pageObject = list.pageObject;
+				$("#reply_nav").html(ajaxPage(pageObject));
+			} //function(list) 의 끝
 			
 	);} //showList()의 끝 댓글보기끝
 	
@@ -277,9 +282,12 @@ $(function(){
 						</li>
 					</ul>
 				</div>
-				<div class= "panel-footer">
-					<pageObject:pageNav listURI="replies/list.do"  pageObject="${pageObject }" />
-				</div>
+			</div>
+			<div class= "panel-footer">
+				<ul class="pagination" id="reply_nav">
+					<li data-page =1><a>1</a></li>
+					<li class="active" data-page =1><a>2</a></li>
+				</ul>
 			</div>
 			<!-- 댓글 Panel의 끝 -->
 		</div>

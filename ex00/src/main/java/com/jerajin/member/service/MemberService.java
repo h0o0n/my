@@ -29,4 +29,10 @@ public class MemberService {
 	}
 
 
+	public int idCheck(String id) {
+		// TODO Auto-generated method stub
+		return mapper.checkId(id);
+	}
+
+
 }

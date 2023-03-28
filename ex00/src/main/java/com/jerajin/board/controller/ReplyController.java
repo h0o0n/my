@@ -58,6 +58,7 @@ public class ReplyController {
 		map.put("pageObject", replyPageObject);
 		map.put("list", service.list(replyPageObject, no));
 		
+		
 		return new ResponseEntity<>(map, HttpStatus.OK);
 	}
 
