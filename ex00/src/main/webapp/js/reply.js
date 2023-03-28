@@ -38,9 +38,82 @@
 			}
 			); // getSJON 끝단
  		} //list 끝단
+ 		
+ 		//write()------------------------------
+ 		
+ 		function write(reply, callback, error){
+ 			console.log("reply write() ---------------------")
+ 			$.ajax({
+ 				//전송방법에대한 타입
+ 				type:"POST",
+ 				// 요청 URL
+ 				url:"/replies/write.do",
+ 				//전송되는 데이터의 타입과 인코딩 방식
+ 				data: JSON.stringify(reply),
+ 				//data: reply,
+ 				contentType:"application/json; charset=UTF-8",
+ 				// 정상적으로 댓글 쓰기 성공 했을 때의 처리하는 방식
+ 				success: function(result, status, xhr){
+ 					if(callback) callback(result);
+ 					else alert("댓글쓰기 성공");
+ 				},
+ 				//처리도중 오류가 난 경우 처리하는 함수
+ 				error : function(xhr,status,err){
+					if(error) error(err);
+					else alert("댓글쓰기 실패");				 						
+ 				}
+ 			});
+ 		}
+ 		
+ 		//update()-----------------------------
+ 		
+ 		function update(reply, callback, error){
+			console.log("reply update() ---------------------") 		
+			$.ajax({
+				type:"patch", // Controller 와 매핑을 맞춰야함
+				url: "/replies/update.do",
+				data: JSON.stringify(reply),
+				contentType:"application/json; charset=UTF-8",
+				success: function(result, status, xhr){
+					if(callback) callback(result);
+					else alert("댓글 수정 성공");
+				},
+				error: function(xhr,status,err){
+					if(error) error(err);
+					else alert("댓글 수정 실패");
+					}
+				});
+ 		}
+ 		
+ 		//delete()------------------------------
+ 		
+ 		function del(reply, callback, error){
+ 			console.log("reply delete() --------------")
+ 			console.log(reply)
+ 			$.ajax({
+ 				type: "delete",
+ 				url: "/replies/del.do",
+ 				data: JSON.stringify(reply),
+ 				contentType:"application/json; charset=UTF-8",
+ 				success: function(result, status, xhr){
+ 					if(callback) callback(result);
+ 					alert("댓글 삭제 성공")
+ 				},
+ 				error: function(xhr,status,err){
+ 					if(error) error(err);
+ 					else alert("댓글 삭제 실패");
+ 				}
+ 			});
+ 		
+ 		}
+ 		
  		return{
  			//replyService.list(param.callback)
- 			list : list
+ 			list : list,
+ 			write: write,
+ 			update:update,
+ 			del: del
+ 			
  		}
  	}
  )();

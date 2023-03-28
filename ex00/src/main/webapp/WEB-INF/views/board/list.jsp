@@ -26,6 +26,7 @@ $(function(){
 </script>
 <!DOCTYPE html>
 <html>
+<%@ include file="/resources/html/navbar.html" %>
 <head>
 <meta charset="UTF-8">
 <title>게시판 리스트</title>
@@ -56,7 +57,7 @@ $(function(){
 		<a href="write.do?perPageNum=${pageObject.perPageNum }"
 			class="btn btn-default">글쓰기</a>
 		<div>
-			<pageObject:pageNav listURI="list.do" pageObject="${pageObject }" />
+			<pageObject:pageNav listURI="list.do" pageObject="${pageObject }"/>
 		</div>
 	</div>
 </body>

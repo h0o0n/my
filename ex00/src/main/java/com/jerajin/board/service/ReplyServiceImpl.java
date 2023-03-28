@@ -41,22 +41,22 @@ public class ReplyServiceImpl implements ReplyService {
 	@Override
 	public int write(ReplyVO vo) throws Exception {
 		// TODO Auto-generated method stub
-		log.info("write().vo : " + vo);
+		System.out.println("write().vo : " + vo);
 		return mapper.write(vo);
 	}
 
 	@Override
 	public int update(ReplyVO vo) throws Exception {
 		// TODO Auto-generated method stub
-		log.info("update().vo : " + vo);
+		System.out.println("update().vo : " + vo);
 		return mapper.update(vo);
 	}
 
 	@Override
-	public int delete(ReplyVO vo) throws Exception {
+	public int del(ReplyVO vo) throws Exception {
 		// TODO Auto-generated method stub
-		log.info("delete().vo : " + vo);
-		return mapper.delete(vo);
+		//log.info("delete().vo : " + vo);
+		return mapper.del(vo);
 	}
 
 }

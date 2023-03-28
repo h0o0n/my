@@ -19,26 +19,27 @@
 		where rnum between #{pageObject.startRow} and #{pageObject.endRow}
 	</select>
 
+	<!-- 게시판 댓글 전체 갯수 - 게시판 글 번호 필요  -->
 	<select id="getTotalRow" resultType="java.lang.Long">
-		select count(*) 
-		from tbl_reply
+		select count(*) from tbl_reply
+		where no = #{no}
 	</select>
 	
 	<!-- 게시판 글쓰기 - BoardVO가 넘어온다. : vo 안에 있는 프로퍼티 이름만 쓰시면 된다. -->
 	<insert id="write">
-		insert into tbl_reply(rno, no, reply, replyer)
-		values (seq_reply.nextval, #{no}, #{content}, #{writer})
+		insert into tbl_reply(rno, no, reply, replyer, REPLYDATE)
+		values (seq_reply.nextval, #{no}, #{reply}, #{replyer}, SYSDATE)
 	</insert>
 	
 	<!-- 게시판 글수정 - BoardVO가 넘어온다. : vo 안에 있는 프로퍼티 이름만 쓰시면 된다. -->
 	<update id="update">
 		update tbl_reply
-		set reply = #{content}, replyer = #{writer}
+		set reply = #{reply}, replyer = #{replyer}
 		where rno = #{rno}
 	</update>
 	
 	<!-- 게시판 글삭제 - 글번호 : rno -->
-	<delete id="delete">
+	<delete id="del">
 		delete from tbl_reply
 		where rno = #{rno}
 	</delete>

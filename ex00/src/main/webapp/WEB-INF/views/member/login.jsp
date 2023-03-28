@@ -19,22 +19,31 @@ pageEncoding="UTF-8"%>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>게시판 로그인</title>
 </head>
-<body>
+
 <div class="container">
-<form action="login.do" method="post">
-<h1>게시판 로그인</h1>
-<div class="form-group">
-	<label>아이디</label>
-	<input name="id" id="id" class="form-control">
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-md-offset-4">
+            <h1 class="text-center login-title">Sign in to continue to Bootsnipp</h1>
+            <div class="account-wall">
+                <img class="profile-img" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120"
+                    alt="">
+                <form action="login.do" method="post" class="form-signin">
+                <input type="id" name="id" class="form-control" placeholder="id" required autofocus>
+                <input type="pw" name="pw" class="form-control" placeholder="Password" required>
+                <button class="btn btn-lg btn-primary btn-block">
+                    Sign in</button>
+                <label class="checkbox pull-left">
+                    <input type="checkbox" value="remember-me">
+                    Remember me
+                </label>
+                <a href="#" class="pull-right need-help">Need help? </a><span class="clearfix"></span>
+                </form>
+            </div>
+            <a href="#" class="text-center new-account">Create an account </a>
+        </div>
+    </div>
 </div>
-<div class="form-group">
-	<label>비밀번호</label>
-	<input name="pw" id="pw" class="form-control">
-</div>
-<button>로그인</button>
-</form>
 
 </div>
 </body>

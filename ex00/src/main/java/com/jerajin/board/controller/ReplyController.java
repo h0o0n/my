@@ -1,5 +1,6 @@
 package com.jerajin.board.controller;
 
+import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -13,9 +14,11 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.jerajin.board.service.ReplyService;
 import com.jerajin.board.vo.ReplyVO;
@@ -51,30 +54,39 @@ public class ReplyController {
 		Map<String, Object> map = new HashMap<>();
 		// 댓글에 대한 페이지 정보
 		PageObject replyPageObject = new PageObject(repPage, repPerPageNum);
+		
 		map.put("pageObject", replyPageObject);
 		map.put("list", service.list(replyPageObject, no));
+		
 		return new ResponseEntity<>(map, HttpStatus.OK);
 	}
 
-	@PostMapping("/write.do")
+	@PostMapping(value= "/write.do", 
+			consumes = {MediaType.APPLICATION_JSON_UTF8_VALUE},
+			produces = {"application/text; charset=utf-8"})
 	//3-2.write
-	public String write(ReplyVO vo) throws Exception{
+	public ResponseEntity<String> write(@RequestBody ReplyVO vo) throws Exception{
+		
 		service.write(vo);
-		return "redirect:list.do";
+		return new ResponseEntity<String>("댓글이 등록되었습니다.",HttpStatus.OK);
 	}
 	
 	//4-2. update
-	@PatchMapping("/update.do")
-	public String update(ReplyVO vo) throws Exception{
+	@PatchMapping(value = "/update.do",
+			consumes = {MediaType.APPLICATION_JSON_UTF8_VALUE},
+			produces = {"application/text; charset=utf-8"})
+	public ResponseEntity<String> update(@RequestBody ReplyVO vo) throws Exception{
 		service.update(vo);
-		return "redirect:list.do";
+		return new ResponseEntity<String>("댓글이 수정되었습니다.",HttpStatus.OK);
 	}
 	
 	//5. delete
-	@DeleteMapping("/delete.do")
-	public String delete(ReplyVO vo) throws Exception{
-		service.delete(vo);
-		return "forward:list.do";
+	@DeleteMapping(value = "/del.do",
+			consumes = {MediaType.APPLICATION_JSON_UTF8_VALUE},
+			produces = {"application/text; charset=utf-8"})
+	public ResponseEntity<String> delete(@RequestBody ReplyVO vo) throws Exception{
+		service.del(vo);
+		return new ResponseEntity<String>("댓글이 삭제되었습니다.",HttpStatus.OK);
 	}
 	
 }

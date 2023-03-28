@@ -31,6 +31,6 @@ public interface ReplyService {
 	public int update(ReplyVO vo)throws Exception;
 	
 	//댓글 삭제
-	public int delete(ReplyVO vo)throws Exception;
+	public int del(ReplyVO vo)throws Exception;
 	
 }
