@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        compute();
+
+        //사용자 정의함수
+        function compute(){
+            var a = 10;
+            console.log(a);
+        }
+
+        function compute2(){
+            console.log("선언적 함수 호출");
+        }
+
+        var a = compute; //함수를 변수에 저장할 때는 괄호를 붙히지 않음
+        a();             //호출방식
+
+        //익명함수 기법 - 변수에 함수를 저장해서 마치 함수를 변수처럼 사용하는 형태
+        var compute3 = function(){
+            console.log("익명함수 호출")
+        }
+        
+        compute3();
+
+
+    </script>
+</body>
+</html>
