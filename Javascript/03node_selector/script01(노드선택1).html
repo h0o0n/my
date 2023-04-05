@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head></head>
+<body>
+    
+    <script>
+        window.onload = function(){
+
+            var btn1 = document.getElementById("btn1")
+            btn1.onclick = function (){
+                var inter = document.getElementsByName("inter")
+                console.log(inter[0]) 
+                console.log(inter[1]) 
+                console.log(inter[2]) 
+            }
+
+            var btn2 = document.getElementById("btn2")
+            btn2.onclick = function(){
+                var nice = document.getElementsByClassName("nice")
+
+                for(var i=0; i<nice.length; i++){
+                    console.log(nice[i]);
+                }
+                
+            }
+
+        }
+    </script>
+    <button id="btn1">체크박스요소 확인</button>
+    <input type="checkbox" name="inter" value="1">JAVA
+    <input type="checkbox" name="inter" value="1">JSP
+    <input type="checkbox" name="inter" value="1">JSX
+    
+    <br>
+
+    <button id="btn2">라디오 확인</button>
+    <input type="radio" name="major" class="nice" value="1">프로그램
+    <input type="radio" name="major" class="nice" value="1">디자인
+    <input type="radio" name="major" class="nice" value="1">시스템
+    
+</body>
+</html>

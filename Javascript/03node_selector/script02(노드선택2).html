@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        window.onload = function(){
+            
+            var li = document.querySelector(".box1 ul li");
+            var btn1 = document.querySelector("#btn1");
+            btn1.onclick = function(){
+
+                li.innerHTML = "CodingJavascript";
+            }
+
+            var list = document.querySelectorAll(".box2 ul li");
+            var btn2 = document.querySelector("#btn2");
+            btn2.onclick = function(){
+                for(var i=0; i<list.length; i++){
+                    list[i].innerHTML = "CodingJs"
+                    console.log(list[i]);
+                }
+            }
+        }
+
+    </script>
+    <button id="btn1">querySelect 확인</button><br>
+    <div class = "box1">
+        <ul>
+            <li>안녕</li>
+            <li>헬로</li>
+            <li>하이</li>
+        </ul>
+    </div>
+
+    <button id="btn2">querySelectAll확인</button><br>
+    <div class = "box2">
+        <ul>
+            <li>카리나</li>
+            <li>윈터</li>
+            <li>츄</li>
+        </ul>
+    </div>
+</body>
+</html>

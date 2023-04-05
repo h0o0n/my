@@ -477,3 +477,182 @@ last_modified_at: 2023-04-05
 2.기본 이벤트 모델    
 3.표준 이벤트 모델   
 이 있으며, 이벤트 앞에 on을 붙인다.
+
+```html
+<!DOCTYPE html>
+<head></head>
+<body>
+
+    <button onclick ="check1()"> 인라인 이벤트 </button>
+
+    <button onclick ="check2(this)">버튼 1</button>
+    <button onclick ="check2(this)">버튼 2</button>
+    <button onclick ="check2(this)">버튼 3</button>
+
+    <script>
+        function check1(){
+            alert('경고창')
+        }
+
+        function check2(a){
+            console.log(a);
+        }
+    </script>
+</body>
+</html>
+```
+
+#기본 이벤트 방식  
+기본 이벤트 방식은 HTML 태그를 얻어와서 익명함수 기법으로 이벤트를 등록한다  
+HTML태그를 얻어올 때는 순서상 HTML 태그가 취득할 명령어 이후에 오면 반드시 load 이벤트를 적용해야함  
+load 이벤트는 페이지당 한 번만 사용 가능하다  
+
+```html
+<!DOCTYPE html>
+<head></head>
+<body>
+    <script>
+        //onload 이벤트는 페이지가 로딩된 이후에 실행되는 이벤트.
+        //페이지당 한번만 사용할 수 있다.
+        window.onload = function() {
+            var btn = document.getElementById("btn")
+            btn.onclick = function(){
+                console.log("기본이벤트 실행")
+            }
+        }
+        console.log(btn);
+    </script>
+
+    <button type="button" id ="btn">기본이벤트</button>
+</body>
+</html>
+```  
+
+#표준이벤트방식  
+표준 이벤트방식은 HTML 태그를 얻어와서 이벤트리스너 함수로 이벤트를 등록한다  
+표준 이벤트방식은 동일 이벤트를 여러개 등록 가능하다
+
+---
+title:  "[JavaScript] 노드 선택"
+excerpt: ""
+categories:
+  - JavaScript
+tags:
+  - [JavaScript]
+
+toc: true
+toc_sticky: true
+ 
+date: 2023-04-05
+last_modified_at: 2023-04-05
+---
+![](/assets/img/dom.png)
+
+#DOM(DocumentObjectModel)
+DOM객체는 document. 으로 시작된다  
+Body 태그 Form, div - span  
+
+Element 노드 선택  
+getElementById()  
+getElementsByName()  
+getElementsByClassName()  
+getElementSByTagName()  
+querySelector()  
+querySelectorAll()
+
+```html
+<!DOCTYPE html>
+<head></head>
+<body>
+    
+    <script>
+        window.onload = function(){
+
+            var btn1 = document.getElementById("btn1") //id 가 btn1인 아이디 가져와서 변수에 저장
+
+            btn1.onclick = function (){                //btn1 버튼 이벤트 발생                     
+                                                       //inter를 name으로 가지는 요소들을 inter변수에 저장
+                var inter = document.getElementsByName ("inter")
+                console.log(inter[0]) 
+                console.log(inter[1]) 
+                console.log(inter[2]) 
+            } 
+
+            var btn2 = document.getElementById("btn2") 
+            btn2.onclick = function(){                //클래스가 nice인 요소들 nice변수에 저장
+                var nice = document.getElementsByClassName("nice")
+                                                     //반복문으로 요소들 가져오기
+                for(var i=0; i<nice.length; i++){
+                    console.log(nice[i]);
+                }
+                
+            }
+
+        }
+    </script>
+    <button id="btn1">체크박스요소 확인</button>
+    <input type="checkbox" name="inter" value="1">JAVA
+    <input type="checkbox" name="inter" value="1">JSP
+    <input type="checkbox" name="inter" value="1">JSX
+    
+    <br>
+
+    <button id="btn2">라디오 확인</button>
+    <input type="radio" name="major" class="nice" value="1">프로그램
+    <input type="radio" name="major" class="nice" value="1">디자인
+    <input type="radio" name="major" class="nice" value="1">시스템
+    
+</body>
+</html>
+```  
+
+#CSS 문법으로 노드선택  
+querySelector()  
+querySelectorAll()  
+
+```html
+<!DOCTYPE html>
+<head></head>
+<body>
+    <script>
+        window.onload = function(){
+            
+            var li = document.querySelector(".box1 ul li");
+            var btn1 = document.querySelector("#btn1");
+            btn1.onclick = function(){
+
+                li.innerHTML = "CodingJavascript";
+            }
+
+            var list = document.querySelectorAll(".box2 ul li");
+            var btn2 = document.querySelector("#btn2");
+            btn2.onclick = function(){
+                for(var i=0; i<list.length; i++){
+                    list[i].innerHTML = "CodingJs"
+                    console.log(list[i]);
+                }
+            }
+        }
+
+    </script>
+    <button id="btn1">querySelect 확인</button><br>
+    <div class = "box1">
+        <ul>
+            <li>안녕</li>
+            <li>헬로</li>
+            <li>하이</li>
+        </ul>
+    </div>
+
+    <button id="btn2">querySelectAll확인</button><br>
+    <div class = "box2">
+        <ul>
+            <li>카리나</li>
+            <li>윈터</li>
+            <li>츄</li>
+        </ul>
+    </div>
+</body>
+</html>
+
+```

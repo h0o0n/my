@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick ="check1()"> 인라인 이벤트 </button>
+
+    <button onclick ="check2(this)">버튼 1</button>
+    <button onclick ="check2(this)">버튼 2</button>
+    <button onclick ="check2(this)">버튼 3</button>
+
+    <script>
+        function check1(){
+            alert('경고창')
+        }
+
+        function check2(a){
+            console.log(a);
+        }
+    </script>
+</body>
+</html>
