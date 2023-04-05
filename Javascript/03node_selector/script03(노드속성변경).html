@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>css 스타일 변경하기</h2>
+    <form id="form">
+        <img src="1.jpg" width="200" class="img" style="border: 3px solid black;"><br>
+        <select class="select">
+            <option value="1.jpg">winter</option>
+            <option value="2.jpg">spring</option>
+            <option value="3.jpg">summer</option>
+            <option value="4.jpg">fall</option>
+        </select>
+        <span>변경할 색상 : </span>
+        <input type="color" class="input">
+    </form>
+    
+    <script>
+        var form = document.getElementById("form"); // form 전체를 가져오기
+        
+        var img = form.querySelector(".img");       // 부모태그를 가져온후 .을 이용하여 가져오기
+        var select = form.querySelector(".select"); // querySelector의 css선택자 이용
+        var input = form.querySelector(".input");    
+
+        select.onchange = function(){                // onchage 이벤트 값이 변경되는 것을 감지
+            img.src = select.value
+        }
+
+        input.onchange = function(){
+
+            //img.style.border = "3px solid " + input.value;
+            img.style.borderColor = input.value;     //카멜표기법
+            console.log(input.value )
+        }
+
+    </script>
+</body>
+</html>
