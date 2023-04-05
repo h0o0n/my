@@ -302,9 +302,9 @@ date: 2023-04-04
 last_modified_at: 2023-04-05
 ---
 
-#전역변수
+#전역변수  
 페이지 전역에서 사용할 변수는 함수 밖에 선언 하고 전역변수라고 한다.  
-#지역 변수 
+#지역 변수  
 함수 안에서 사용할 변수는 함수 안에 선언하고 지역변수라고 한다.  
 if,for문 안에 선언된 변수는 중괄호 밖에서도 사용 가능하다.
 
@@ -427,3 +427,53 @@ JSON을 이용하여 원격에 있는 데이터를 주고받을 수 있는데
 '문자열 형'으로만 주고받을 수 있고  
 JSON.parse()는 문자열 -> JSON  
 JSON.stringfiy()는 JSON -> 문자열 으로 변환한다
+
+
+```javascript
+<script>
+    var data = [
+        {id:"kkk123", title:"java", contnet: "good"},
+        {id:"bbb123", title:"jsp", contnet: "nice"},
+        {id:"aaa123", title:"javascript", contnet: "soso"}
+    ];
+
+    var result = JSON.stringify(data);
+    console.log(result);
+    //실행결과 
+    [{"id":"kkk123","title":"java","contnet":"good"},{"id":"bbb123","title":"jsp","contnet":"nice"},{"id":"aaa123","title":"javascript","contnet":"soso"}]
+
+    var result2 = JSON.parse(result); //JSON으로 파싱
+    console.log(result2);
+
+    //형식을 바꿀때는 규칙을 지켜서 해야함
+    //문자열을 JSON 형식으로 변경할때는 key와 value를 ""형식으로 감싸쪄야 한다.
+    var result3 = JSON.parse('{"id":"kkk123", "title":"oracle"}');
+    console.log(result3);
+    console.log(JSON.stringify(result3));
+</script>
+
+```
+
+
+---
+title:  "[JavaScript] 인라인 이벤트 방식"
+excerpt: ""
+categories:
+  - JavaScript
+tags:
+  - [JavaScript]
+
+toc: true
+toc_sticky: true
+ 
+date: 2023-04-05
+last_modified_at: 2023-04-05
+---
+
+#이벤트  
+화면에서 클릭이나, 동작시 발생하는 동적인 기능이다
+태그와 스크립트의 이벤트를 연결 하는 방식에는  
+1.인라인 이벤트 모델    
+2.기본 이벤트 모델    
+3.표준 이벤트 모델   
+이 있으며, 이벤트 앞에 on을 붙인다.
