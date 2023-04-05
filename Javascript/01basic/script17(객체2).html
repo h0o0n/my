@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var data = [
+            {id:"kkk123", title:"java", contnet: "good"},
+            {id:"bbb123", title:"jsp", contnet: "nice"},
+            {id:"aaa123", title:"javascript", contnet: "soso"}
+        ];
+
+        var result = JSON.stringify(data);
+        console.log(result);
+
+        var result2 = JSON.parse(result);
+        console.log(result2);
+
+        //형식을 바꿀때는 규칙을 지켜서 해야함
+        //문자열을 JSON 형식으로 변경할때는 key와 value를 ""형식으로 감싸쪄야 한다.
+        var result3 = JSON.parse('{"id":"kkk123", "title":"oracle"}');
+        console.log(result3);
+        console.log(JSON.stringify(result3));
+    </script>
+</body>
+</html>
