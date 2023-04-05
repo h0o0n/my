@@ -244,3 +244,186 @@ last_modified_at: 2023-04-04
 -자바스크립트의 return 뒤에 함수 실행 후 돌려 줄 값을 적는다  
 -return false를 만나면 함수는 강제종료  
 
+```javascript
+<script>
+function func1(x) {
+
+    var sum = 0;
+    for(var i=1; i<=x; i++){
+        sum += i;
+    }
+    return sum;
+}
+
+function func2(x, y){
+    return x+y;
+}
+
+var func3 = function(x,y,z){
+    return x+y+z;
+}
+
+console.log (func1(10) );
+console.log( func2(10, 20) );
+console.log( func3(10, 20, '안녕') );
+</script>
+```
+#함수가변인자
+```javascript
+<script>
+  func1(1,2,3,4,5,"hi");
+
+  //매개변수는 함수의 실행과 관련 없음을 알 수 있다
+  //전달되는 매개변수 값은 arguments로 꺼내서 사용 가능
+
+  function func1(a,b) {
+    console.log(arguments);
+    console.log(arguments[0]);
+    console.log(arguments[5]);
+    console.log
+  }
+
+
+</script>
+```
+
+---
+title:  "[JavaScript] 전역변수와 지역변수"
+excerpt: ""
+categories:
+  - JavaScript
+tags:
+  - [JavaScript]
+
+toc: true
+toc_sticky: true
+ 
+date: 2023-04-04
+last_modified_at: 2023-04-05
+---
+
+#전역변수
+페이지 전역에서 사용할 변수는 함수 밖에 선언 하고 전역변수라고 한다.  
+#지역 변수 
+함수 안에서 사용할 변수는 함수 안에 선언하고 지역변수라고 한다.  
+if,for문 안에 선언된 변수는 중괄호 밖에서도 사용 가능하다.
+
+```javascript
+<script>
+
+
+//전역변수 사용
+    var num1 = 50;
+    if(num1 === 50){
+        var num1 = 60;
+    }
+    console.log(num1);
+
+//전역,지역변수 사용
+    var num2 = 50;
+    function add(){
+        var num2 = 60;
+        var num2 = 70;
+    }
+    add();
+    console.log(num2); //50
+</script>
+```
+#클로저  
+외부 함수에서 내부의 값에 접근하여 사용할 수 있는 것
+```javascript
+<script>
+  function func1() {
+      var a = "안녕";
+
+      return function(){
+          return a;
+      }   
+  }
+
+  var b = func1();
+  console.log(b); //실행결과  ƒ (){ return a; } 함수 자체를 호출
+  console.log(b() ); //함수를 호출하여 값에 클로저 "안녕" 호출
+</script>
+```
+
+---
+title:  "[JavaScript] 객체(Object)"
+excerpt: ""
+categories:
+  - JavaScript
+tags:
+  - [JavaScript]
+
+toc: true
+toc_sticky: true
+ 
+date: 2023-04-05
+last_modified_at: 2023-04-05
+---
+
+
+#객체(Object)
+
+자바스크립트의 객체는 {키:값}로 표기됩니다.  
+자바스크립트의 객체는.을 찍어 접근한다.
+Java의 Map과 비슷하다  
+
+```javascript
+<script>
+    //객체 생성
+    var person ={name: "홍길동", age: 20, arr:[1,2,3]};
+
+    //객체에 접근하는 첫번째 방법
+    console.log(person.name);
+    console.log(person.age);
+    console.log(person.arr[0]);
+    console.log(person);
+
+    //객체에 접근하는 두번째 방법
+    console.log(person["name"]);
+    console.log(person["arr"][0]);
+
+
+    var exam = {math:50, eng:70, kor:90};
+
+    var kim = {name:"김길동", exam: exam};
+    //위의 kim 객체의 exam key 값에 위 exam 객체가 저장됨
+    console.log(kim.name);
+    console.log(kim.exam);
+    //실행결과 {name: '홍길동', age: 20, arr: Array(3)}
+    
+    //배열안에 객체
+    var arr =[
+        {id:1, title:"hi", content:"안녕하세요"},
+        {id:2, title:"bye", content:"안녕히가세요"}
+    ];
+
+    console.log(arr);
+    console.log(arr[0].id);
+    console.log(arr[0].title);
+    console.log(arr[0].content);
+</script>
+```
+
+---
+title:  "[JavaScript] JSON(Javascript Object Notation)"
+excerpt: ""
+categories:
+  - JavaScript
+tags:
+  - [JavaScript]
+
+toc: true
+toc_sticky: true
+ 
+date: 2023-04-05
+last_modified_at: 2023-04-05
+---
+
+#JSON  
+JSON은 자바스크립트 객체로 구성된 데이터이다  
+JSON을 이용하여 원격에 있는 데이터를 주고받을 수 있는데 
+'문자열 형'으로만 주고받을 수 있고  
+JSON.parse()는 문자열 -> JSON  
+JSON.stringfiy()는 JSON -> 문자열 으로 변환한다
