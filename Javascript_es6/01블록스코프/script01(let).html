@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        var x = 1;
+        var x = 100;
+        console.log(x);
+
+        //let y = 1;
+        //let y = 100;
+
+        var x = 1;
+        if(true){
+            var x = 200;
+            console.log(x);
+        }
+
+        console.log(x);     //var 변수는 if 문 밖에서도 사용 가능
+
+        let z = 1;
+        if(true){           // let 변수의 유효범위 {}이다.
+            let z = 100;
+            console.log(z); // 100 //let 변수는 여기서 끝.
+        }
+
+        console.log(z);
+
+        
+    </script>
+</body>
+</html>
