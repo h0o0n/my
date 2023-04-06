@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {border-collapse: collapse; border-radius: 4px;}
+        thead th, tbody td{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <th>번호</th>
+            <th>이름</th>
+            <th>내용</th>
+            <th>삭제</th>
+        </thead>
+        <tbody class="list">
+            <tr>
+                <td>1</td>
+                <td>츄</td>
+                <td>안녕</td>
+                <td><button type="button">삭제</button></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>치치</td>
+                <td>안녕</td>
+                <td><button type="button">삭제</button></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>룰루</td>
+                <td>안녕</td>
+                <td><button type="button">삭제</button></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>말리</td>
+                <td>안녕</td>
+                <td><button type="button">삭제</button></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>츄</td>
+                <td>안녕</td>
+                <td><button type="button">삭제</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+
+        var list = document.querySelector(".list");             //부모태그 지정
+
+
+
+        list.onclick = function(){                              //부모태그에 이벤트
+            //console.log(event.target)
+            if(event.target.tagName != "BUTTON"){               //이벤트 tag가 BUTTON이 아닌것은 제외
+                return;
+            }else{
+            event.target.parentElement.parentElement.remove();
+            }
+        }
+
+    </script>
+
+</body>
+</html>

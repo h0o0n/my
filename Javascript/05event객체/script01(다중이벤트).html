@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {border-collapse: collapse; border-radius: 4px;}
+        thead th, tbody td{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <th>번호</th>
+            <th>이름</th>
+            <th>내용</th>
+            <th>삭제</th>
+        </thead>
+        <tbody class="list">
+            <tr>
+                <td>1</td>
+                <td>츄</td>
+                <td>안녕</td>
+                <td><button type="button">삭제</button></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>치치</td>
+                <td>안녕</td>
+                <td><button type="button">삭제</button></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>룰루</td>
+                <td>안녕</td>
+                <td><button type="button">삭제</button></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>말리</td>
+                <td>안녕</td>
+                <td><button type="button">삭제</button></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>츄</td>
+                <td>안녕</td>
+                <td><button type="button">삭제</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        var tbody = document.querySelector(".list");
+        var list  = tbody.querySelectorAll("td > button");
+
+        for(var i=0; i < list.length; i++){
+
+            list[i].onclick = function(){
+                /*
+                console.log(event); //이벤트 객체를 호출
+                console.log(arguments);
+                console.log(arguments[0]); // event === arguments
+                */
+                //console.dir(event)
+                console.log(event.target)                           //event.target -> 마우스의 클릭 이벤트에 해당하는 노드
+                event.target.parentElement.parentElement.remove();  //button 노드의 부모 부모 노드인 tr 태그를 삭제
+            }
+        }
+    </script>
+
+</body>
+</html>
