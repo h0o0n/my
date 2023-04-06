@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {margin: 0; padding:0;}
+        ul, li {list-style:none;}
+        .mainTitle {text-align: center;}
+        .movieList {overflow: hidden; width: 80%; margin: 0 auto;}
+        .movieList .movie {float:left; width:33.33333%; height: 300px; position: relative;}
+        .movie img {width: 100px; position: absolute; top:0; left:0;}
+        .inner {padding-left: 100px;}
+        .inner .genres li {display: inline-block;}
+        .inner .summary {overflow:scroll; height: 100px;}
+    </style>
+</head>
+<body>
+    <div class="mainTitle">
+        <h3>영화 리스트</h3>
+    </div>
+    <div class="movieList">
+        <!--
+        <div class="movie">
+            <img src="##" />
+            <div class="inner">
+                <h3 class="title">제목</h3>
+                <h3 class="year">개봉일</h3>
+                <ul class="genres">
+                    <li>list1</li>
+                    <li>list2</li>
+                </ul>
+                <p class="summary">내용</p>
+            </div>
+        </div>
+        -->
+    </div>
+
+
+
+    <script>
+
+        function ajax(){
+
+            fetch("https://yts.mx/api/v2/list_movies.json?sort_by=year&order_by=desc").then(function(response){
+                //https://yts.mx/api/v2/list_movies.json 에서 json 데이터 받아오기
+                if(response.status != 200){
+                    alert("서버와 통신에 실패했습니다.")
+                }else{
+                    return response.json();
+                    //response에성공했을때 json불러오기
+                }
+            }).then(function(data){
+                //data값에 json 데이터 저장
+                var moviesData = data.data.movies;
+                //data이름으로 받아온 json 데이터 값의 data 내의 movies값 불러오기
+                var movieList = document.querySelector(".movieList")
+                var tag = ""; //html 태그를 저장 할 변수
+
+                for(var i=0; i<moviesData.length; i++){
+                    //console.log(moviesData[i]);
+                //반복문 돌려서 json 데이터 값을 모두 불러오기
+
+                    var title = moviesData[i].title;
+                    var year = moviesData[i].year;
+                    var img = moviesData[i].medium_cover_image;
+                    var summary = moviesData[i].summary;
+                    var genres = moviesData[i].genres;
+
+                    console.log(title,year,img,summary,genres);
+                    //tag안에 html 태그를 넣는 방식으로 html 조립
+                    tag += '<div class="movie">';
+                    tag += '<img src="'+ img +'" />';  
+                    tag += '<div class="inner">';   
+                    tag += '<h3 class="title">'+ title +'</h3>';       
+                    tag += '<h3 class="year">'+year+'</h3>';       
+                    tag += '<ul class="genres">';
+                            for(var k in genres){
+                                tag += '<li>'+genres[k]+'</li>';
+                            }              
+                    tag += '</ul>'       
+                    tag += '<p class="summary">'+summary+'</p>'       
+                    tag += '</div>'   
+                    tag += '</div>' 
+                }
+                movieList.innerHTML = tag;
+                // innerHTML을 통해 tag를 넣어 html 화면에서 처리하기
+            })
+        }
+
+
+        (function(){
+            ajax();
+        })();
+
+    </script>
+</body>
+</html>
