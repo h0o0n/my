@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {border-spacing: 0; border-collapse: collapse;}
+        thead th, tbody td{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <button button="type" id="del">일괄 삭제</button>
+    <table>
+        <thead>
+            <th><input type="checkbox" class="allCheck"></th>
+            <th>번호</th>
+            <th>이름</th>
+            <th>내용</th>
+            <th>날짜</th>
+        </thead>
+        <tbody class="table">
+            <tr>
+                <td><input type="checkbox" class="check"></td>
+                <td>1</td>
+                <td>츄</td>
+                <td>안녕하세요</td>
+                <td>2023-04-06</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="check"></td>
+                <td>2</td>
+                <td>도도</td>
+                <td>안녕하세요</td>
+                <td>2023-04-06</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="check"></td>
+                <td>3</td>
+                <td>룽지</td>
+                <td>안녕하세요</td>
+                <td>2023-04-06</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="check"></td>
+                <td>4</td>
+                <td>츄츄</td>
+                <td>안녕하세요</td>
+                <td>2023-04-06</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="check"></td>
+                <td>5</td>
+                <td>츄</td>
+                <td>안녕하세요</td>
+                <td>2023-04-06</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        var btndel = document.getElementById("del");
+        var list = document.querySelectorAll(".check");
+        var listall = document.querySelector(".allCheck")
+        del.onclick = function(){
+
+            //console.log(list[0].checked);  check 가 되어있다면 true를 반환
+            //console.log(list[0].value);
+
+            for(var i=0; i < list.length; i++){
+                if(list[i].checked){
+                    //list[i].remove(); 현재 노드 자체가 삭제되어 체크박스 자체가 삭제됨
+                    list[i].parentElement.parentElement.remove();
+                }
+            }
+        }
+
+        listall.onclick = function(){
+            if(listall.checked){
+                for(var i=0; i<list.length; i++){   
+                    list[i].checked = true;
+                }
+            }else{
+                for(var i=0; i<list.length; i++){   
+                    list[i].checked = false;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

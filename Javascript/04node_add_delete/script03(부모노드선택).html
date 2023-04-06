@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <section>
+        <div>이전</div>
+        <div class="now">
+            <ul>
+                <li><a>목록1</a></li>
+                <li><a>목록2</a></li>
+                <li><a>목록3</a></li>
+            </ul>
+        </div>
+        <div>다음</div>
+    </section>
+
+
+    <script>
+
+        var now = document.querySelector(".now"); // now class 가져오기
+
+        console.dir(now);                         // now에서 사용할 수 있는 기능 확인
+        console.log(now.parentNode);              // 부모노드선택(text)도 포함해서 선택
+        console.log(now.parentElement);           // 부모노드선택
+        console.log(now.previousElementSibling);  // 이전노드선택
+        console.log(now.nextElementSibling);      // 다음노드선택
+        console.log(now.firstElementChild);       // 첫번째 자식노드선택
+        console.log(now.lastElementChild);        // 마지막 자식노드선택
+    </script>
+</body>
+</html>
