@@ -10,7 +10,9 @@
 
 <body>
     <div id="app">
-        {{ nextYear('안녕') }}         <!--인자설정--> 
+        {{ nextYear('안녕') }}         <!--인자설정-->
+        <input type="text" :value="inputData"> <!--데이터 바인딩 설정 v-bind: (v-bind는 생략 가능)-->
+        <a :href="getNaverLink('/ca-fe')">네이버 링크(카페) 연결</a>
     </div>
     <script>
         new Vue({
@@ -19,10 +21,15 @@
                 person: {
                     name: '뷰 코더',
                     age: 24
-                }
+                },
+                inputData: 'hello123',         //바인딩 해줄 데이터 키 값과 데이터 값 설정
+                link: 'https://naver.com'
             },
             methods: {
-                nextYear(greeting){ // 매개변수
+                getNaverLink(channel){
+                    return (this.link + channel) ;
+                },
+                nextYear(greeting){     // 매개변수에 인자를 받아서 함수 처리를 할 수 있음 
                     return greeting + '! ' + this.person.name + '는 내년에 ' + (this.person.age + 1) + '살 입니다.'
                 },
                 otherMethod: function(){
