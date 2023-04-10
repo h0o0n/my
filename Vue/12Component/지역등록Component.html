@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <java-button></java-button>
+    </div>
+    <hr>
+
+    <hr>
+    <div id="app1">
+        <java-button></java-button>
+    </div>
+
+    <script>
+        //전역 등록 방식 으로 사용
+        // Vue.component('hello-world',{
+        //     template: `<div>hello world</div>`
+        // });
+        //지역 등록 방식 으로 사용
+        const HelloWorld = {
+            template: `<div>hello world</div>`
+        }
+        
+
+        //지역 등록 방식 으로 사용 
+        const JavaButton = {
+            components:{'hello-world' : HelloWorld}, // hello-world도 지역으로 등록되어 다른 컴포넌트에서도 사용하기 위해 불러와야함
+            template: `
+            <div>
+                <hello-world></hello-world>
+                {{ name }}<br>
+                <button @click="changeText">Click</button>
+            </div>
+            `,
+            data() {
+                return{
+                    name: "Java changed"
+                }
+            },
+            methods:{
+                changeText(){
+                    this.name = "Java Updated";
+                }
+            }
+        };
+
+        const app = new Vue({
+            el: '#app', 
+            components:{
+                'java-button': JavaButton
+            }
+            
+            // data:{
+            //     name: "Java"
+            // },
+            // methods:{
+            //     changeText(){
+            //         this.name = "Java Updated";
+            //     }
+            // }
+        })
+
+        const app1 = new Vue({
+            el: '#app1',
+            components:{
+                'java-button' : JavaButton
+            }
+        })
+
+    </script>
+</body>
+</html>
