@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let arr = ["홍자바","이애플","홍던킨","김인텔"];
+
+        /*
+        let n1 = arr[0];
+        let n2 = arr[3];
+        console.log(n1,n2);
+        */
+        //위치요소를 반환 받아서 a,b,c,d 변수에 저장
+        let [a,b,c,d] = arr;
+        
+        console.log(a,b,c,d);
+
+        let [n1, , ,n2] = arr;
+        console.log(n1,n2);
+
+        //전부다 반환 받는다
+        let [...x] = arr;
+        console.log(x);
+
+        let[k1,k2, ...all] = arr;
+        console.log(k1,k2,all)
+    </script>
+
+</body>
+</html>

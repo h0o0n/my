@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>      
+    
+
+    <script>
+        let list = [
+            {
+                "num":1,
+                "title":"hello",
+                "info":["banana","apple"],
+                "profile":{"birth":"20201111","img":"https://www.test.com/1"}
+            },
+            {
+                "num":1,
+                "title":"hello",
+                "info":["melon","orange"],
+                "profile":{"birth":"20201112","img":"https://www.test.com/2"}
+            }
+        ]
+
+        let [ , a]= list;
+        console.log (a);
+        let [ , {num,title,info}] = list;ㅁ
+        console.log (num,title,info);
+
+        let[ ,{info:[m,orange]}] = list;
+        console.log(m, orange);
+        
+        let[ , {profile:{birth, img}} ] = list;
+        console.log(birth,img)
+
+    </script>
+</body>
+</html>
