@@ -1,0 +1,7 @@
+C:\Javascript\my\C#\Cstudy\Cstudy\bin\Debug\Cstudy.exe.config
+C:\Javascript\my\C#\Cstudy\Cstudy\bin\Debug\Cstudy.exe
+C:\Javascript\my\C#\Cstudy\Cstudy\bin\Debug\Cstudy.pdb
+C:\Javascript\my\C#\Cstudy\Cstudy\obj\Debug\Cstudy.csproj.AssemblyReference.cache
+C:\Javascript\my\C#\Cstudy\Cstudy\obj\Debug\Cstudy.csproj.CoreCompileInputs.cache
+C:\Javascript\my\C#\Cstudy\Cstudy\obj\Debug\Cstudy.exe
+C:\Javascript\my\C#\Cstudy\Cstudy\obj\Debug\Cstudy.pdb
