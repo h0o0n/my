@@ -1,0 +1,7 @@
+C:\Javascript\my\C#\HelloWorldFrameWorkWithVisualStudio\HelloWorldFrameWorkWithVisualStudio\bin\Debug\HelloWorldFrameWorkWithVisualStudio.exe.config
+C:\Javascript\my\C#\HelloWorldFrameWorkWithVisualStudio\HelloWorldFrameWorkWithVisualStudio\bin\Debug\HelloWorldFrameWorkWithVisualStudio.exe
+C:\Javascript\my\C#\HelloWorldFrameWorkWithVisualStudio\HelloWorldFrameWorkWithVisualStudio\bin\Debug\HelloWorldFrameWorkWithVisualStudio.pdb
+C:\Javascript\my\C#\HelloWorldFrameWorkWithVisualStudio\HelloWorldFrameWorkWithVisualStudio\obj\Debug\HelloWorldFrameWorkWithVisualStudio.csproj.AssemblyReference.cache
+C:\Javascript\my\C#\HelloWorldFrameWorkWithVisualStudio\HelloWorldFrameWorkWithVisualStudio\obj\Debug\HelloWorldFrameWorkWithVisualStudio.csproj.CoreCompileInputs.cache
+C:\Javascript\my\C#\HelloWorldFrameWorkWithVisualStudio\HelloWorldFrameWorkWithVisualStudio\obj\Debug\HelloWorldFrameWorkWithVisualStudio.exe
+C:\Javascript\my\C#\HelloWorldFrameWorkWithVisualStudio\HelloWorldFrameWorkWithVisualStudio\obj\Debug\HelloWorldFrameWorkWithVisualStudio.pdb

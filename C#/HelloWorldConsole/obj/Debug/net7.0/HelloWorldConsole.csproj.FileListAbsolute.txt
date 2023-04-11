@@ -1,0 +1,15 @@
+C:\Javascript\my\C#\HelloWorldConsole\bin\Debug\net7.0\HelloWorldConsole.exe
+C:\Javascript\my\C#\HelloWorldConsole\bin\Debug\net7.0\HelloWorldConsole.deps.json
+C:\Javascript\my\C#\HelloWorldConsole\bin\Debug\net7.0\HelloWorldConsole.runtimeconfig.json
+C:\Javascript\my\C#\HelloWorldConsole\bin\Debug\net7.0\HelloWorldConsole.dll
+C:\Javascript\my\C#\HelloWorldConsole\bin\Debug\net7.0\HelloWorldConsole.pdb
+C:\Javascript\my\C#\HelloWorldConsole\obj\Debug\net7.0\HelloWorldConsole.csproj.AssemblyReference.cache
+C:\Javascript\my\C#\HelloWorldConsole\obj\Debug\net7.0\HelloWorldConsole.GeneratedMSBuildEditorConfig.editorconfig
+C:\Javascript\my\C#\HelloWorldConsole\obj\Debug\net7.0\HelloWorldConsole.AssemblyInfoInputs.cache
+C:\Javascript\my\C#\HelloWorldConsole\obj\Debug\net7.0\HelloWorldConsole.AssemblyInfo.cs
+C:\Javascript\my\C#\HelloWorldConsole\obj\Debug\net7.0\HelloWorldConsole.csproj.CoreCompileInputs.cache
+C:\Javascript\my\C#\HelloWorldConsole\obj\Debug\net7.0\HelloWorldConsole.dll
+C:\Javascript\my\C#\HelloWorldConsole\obj\Debug\net7.0\refint\HelloWorldConsole.dll
+C:\Javascript\my\C#\HelloWorldConsole\obj\Debug\net7.0\HelloWorldConsole.pdb
+C:\Javascript\my\C#\HelloWorldConsole\obj\Debug\net7.0\HelloWorldConsole.genruntimeconfig.cache
+C:\Javascript\my\C#\HelloWorldConsole\obj\Debug\net7.0\ref\HelloWorldConsole.dll
