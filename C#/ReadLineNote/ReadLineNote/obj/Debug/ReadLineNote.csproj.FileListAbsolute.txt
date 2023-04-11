@@ -1,0 +1,7 @@
+C:\Javascript\my\C#\ReadLineNote\ReadLineNote\bin\Debug\ReadLineNote.exe.config
+C:\Javascript\my\C#\ReadLineNote\ReadLineNote\bin\Debug\ReadLineNote.exe
+C:\Javascript\my\C#\ReadLineNote\ReadLineNote\bin\Debug\ReadLineNote.pdb
+C:\Javascript\my\C#\ReadLineNote\ReadLineNote\obj\Debug\ReadLineNote.csproj.AssemblyReference.cache
+C:\Javascript\my\C#\ReadLineNote\ReadLineNote\obj\Debug\ReadLineNote.csproj.CoreCompileInputs.cache
+C:\Javascript\my\C#\ReadLineNote\ReadLineNote\obj\Debug\ReadLineNote.exe
+C:\Javascript\my\C#\ReadLineNote\ReadLineNote\obj\Debug\ReadLineNote.pdb
