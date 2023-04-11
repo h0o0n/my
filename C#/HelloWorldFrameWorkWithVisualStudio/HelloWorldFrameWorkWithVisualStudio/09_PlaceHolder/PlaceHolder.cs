@@ -14,7 +14,6 @@ namespace HelloWorldFrameWorkWithVisualStudio._09_PlaceHolder
             Console.WriteLine("{0}", "Hello, C#");
             Console.WriteLine("{0},{0}", "Hello, C#");
             Console.WriteLine("{1},{0}", "Hello", "C#");
-
         }
     }
 }
