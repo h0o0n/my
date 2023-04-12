@@ -19,4 +19,6 @@ namespace Operator.함수
         //호출 방식 메서드에서 바로 호출 할 수도 있음.
         public void functionNote() => Sum(3, 5);
     }
-}
+
+    
+    }

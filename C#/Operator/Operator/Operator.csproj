@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="구조체\StructureType.cs" />
     <Compile Include="반복문제어\BreakDemo.cs" />
     <Compile Include="반복문제어\ContinueDemo.cs" />
     <Compile Include="반복문제어\GoToDemo.cs" />
@@ -64,5 +65,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
