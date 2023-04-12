@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Operator.제어문;
-
+using Operator.반복문제어;
 namespace Operator
 {
     class Program
@@ -35,8 +35,14 @@ namespace Operator
             /*switch문 sh = new switch문();
             sh.스위치1();*/
 
-            ForDescription fd = new ForDescription();
-            fd.ForSumEven();
+            /*ForDescription fd = new ForDescription();
+            fd.ForSumEven();*/
+
+            /*BreakDemo bd = new BreakDemo();
+            bd.Break();*/
+
+            GoToDemo gtd = new GoToDemo();
+            gtd.GoToDemo1();
         }
     }
 }
