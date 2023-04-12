@@ -61,6 +61,7 @@
     <Compile Include="제어문\switch문.cs" />
     <Compile Include="제어문\while문.cs" />
     <Compile Include="제어문\제어_조건문.cs" />
+    <Compile Include="클래스\ClassDemo.cs" />
     <Compile Include="함수\FunctionNote.cs" />
   </ItemGroup>
   <ItemGroup>
