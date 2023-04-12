@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Operator.제어문;
 using Operator.반복문제어;
+using Operator.함수;
 namespace Operator
 {
     class Program
@@ -41,8 +42,11 @@ namespace Operator
             /*BreakDemo bd = new BreakDemo();
             bd.Break();*/
 
-            GoToDemo gtd = new GoToDemo();
-            gtd.GoToDemo1();
+            /*GoToDemo gtd = new GoToDemo();
+            gtd.GoToDemo1();*/
+
+            FunctionNote nt = new FunctionNote();
+            nt.functionNote();
         }
     }
 }
