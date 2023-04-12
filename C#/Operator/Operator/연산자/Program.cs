@@ -32,8 +32,11 @@ namespace Operator
             Console.WriteLine("123"  + "456");
             Console.WriteLine("123" + true);*/
 
-            switch문 sh = new switch문();
-            sh.스위치1();
+            /*switch문 sh = new switch문();
+            sh.스위치1();*/
+
+            ForDescription fd = new ForDescription();
+            fd.ForSumEven();
         }
     }
 }
