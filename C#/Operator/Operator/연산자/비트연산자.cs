@@ -25,8 +25,8 @@ namespace Operator
 
             // | 연산자 : 비트 OR 연산자(하나라도 1이면 1)
 
-            byte x = 0b1010;
-            byte y = 0b1100;
+            byte a = 0b1010;
+            byte b = 0b1100;
 
 
             Console.WriteLine($"    {Convert.ToString(x, 2) } -> {x}");
@@ -36,8 +36,8 @@ namespace Operator
 
             // ^ 연산자: 비트 XOR 연산자 (서로 다르면 1 같으면 0)
 
-            byte x = 0b1010;
-            byte y = 0b1100;
+            byte c = 0b1010;
+            byte d = 0b1100;
 
 
             Console.WriteLine($"    {Convert.ToString(x, 2) } -> {x}");
@@ -48,8 +48,8 @@ namespace Operator
 
             // ~ 연산자: 비트 NOT 연산자( 1 <-> 0, 비트 반전 연산자)
 
-            byte x = 0b1010;
-            byte y = 0b1100;
+            byte e = 0b1010;
+            byte f = 0b1100;
 
 
             Console.WriteLine($"  ~{Convert.ToString(x, 2) } -> {x}");

@@ -1,0 +1,2 @@
+C:\Javascript\my\C#\Operator\Operator\obj\Debug\C교과서.csproj.AssemblyReference.cache
+C:\Javascript\my\C#\Operator\Operator\obj\Debug\C교과서.csproj.CoreCompileInputs.cache

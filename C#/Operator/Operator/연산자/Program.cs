@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Operator.제어문;
 
 namespace Operator
 {
@@ -10,7 +11,7 @@ namespace Operator
     {
         static void Main(string[] args)
         {
-            var num = 1000;
+            /*var num = 1000;
             var number = num + 1234;
             Console.WriteLine(number);
 
@@ -29,7 +30,10 @@ namespace Operator
 
             Console.WriteLine("Hello, "  + "World");
             Console.WriteLine("123"  + "456");
-            Console.WriteLine("123" + true);
+            Console.WriteLine("123" + true);*/
+
+            switch문 sh = new switch문();
+            sh.스위치1();
         }
     }
 }

@@ -1,0 +1,6 @@
+C:\Javascript\my\C#\Operator\Operator\obj\Debug\Operator.csproj.CoreCompileInputs.cache
+C:\Javascript\my\C#\Operator\Operator\bin\Debug\Operator.exe.config
+C:\Javascript\my\C#\Operator\Operator\bin\Debug\Operator.exe
+C:\Javascript\my\C#\Operator\Operator\bin\Debug\Operator.pdb
+C:\Javascript\my\C#\Operator\Operator\obj\Debug\Operator.exe
+C:\Javascript\my\C#\Operator\Operator\obj\Debug\Operator.pdb

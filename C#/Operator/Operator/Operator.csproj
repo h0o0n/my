@@ -43,14 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="연산자\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="관계형 연산자.cs" />
-    <Compile Include="논리연산자.cs" />
-    <Compile Include="비트연산자.cs" />
-    <Compile Include="삼항연산자.cs" />
-    <Compile Include="시프트연산자.cs" />
-    <Compile Include="할당연산자.cs" />
+    <Compile Include="연산자\관계형 연산자.cs" />
+    <Compile Include="연산자\논리연산자.cs" />
+    <Compile Include="연산자\비트연산자.cs" />
+    <Compile Include="연산자\삼항연산자.cs" />
+    <Compile Include="연산자\시프트연산자.cs" />
+    <Compile Include="연산자\할당연산자.cs" />
+    <Compile Include="제어문\ForDescription.cs" />
+    <Compile Include="제어문\switch문.cs" />
+    <Compile Include="제어문\제어_조건문.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
