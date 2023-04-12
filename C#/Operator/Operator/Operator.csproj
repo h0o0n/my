@@ -53,6 +53,7 @@
     <Compile Include="연산자\할당연산자.cs" />
     <Compile Include="제어문\ForDescription.cs" />
     <Compile Include="제어문\switch문.cs" />
+    <Compile Include="제어문\while문.cs" />
     <Compile Include="제어문\제어_조건문.cs" />
   </ItemGroup>
   <ItemGroup>
