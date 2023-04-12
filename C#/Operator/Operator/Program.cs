@@ -7,6 +7,7 @@ using Operator.제어문;
 using Operator.반복문제어;
 using Operator.함수;
 using Operator.구조체;
+using Operator.열거형;
 
 namespace Operator
 {
@@ -50,8 +51,12 @@ namespace Operator
             /*FunctionNote nt = new FunctionNote();
             nt.functionNote();*/
 
-            StructureType st = new StructureType();
-            st.Structure();
+            /*StructureType st = new StructureType();
+            st.Structure();*/
+
+            EnumerationTextbook etb = new EnumerationTextbook();
+            /*  etb.Enumeration();*/
+            etb.Enum1();
         }
     }
 }
