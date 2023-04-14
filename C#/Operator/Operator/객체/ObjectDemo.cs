@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-public class Class1
+namespace Operator.객체
 {
     public class Cars
     { 
