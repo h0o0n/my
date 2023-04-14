@@ -9,11 +9,18 @@ using Operator.함수;
 using Operator.구조체;
 using Operator.열거형;
 using Operator.클래스;
+using Operator.알고리즘;
+using Operator.객체;
 
 namespace Operator
 {
     class Program
     {
+        public void ada(){
+            Operator.객체.Cars ar = new Cars();
+            ar.Go();
+          }
+
         static void Main(string[] args)
         {
             /*var num = 1000;
@@ -59,8 +66,16 @@ namespace Operator
             *//*  etb.Enumeration();*//*
             etb.Enum1();
 */
-            ClassDemo cd = new ClassDemo();
-            cd.classDemo();
+            /*ClassDemo cd = new ClassDemo();
+            cd.classDemo();*/
+
+            /*Operator.알고리즘.알고리즘 ag = new Operator.알고리즘.알고리즘();
+            ag.algo();*/
+
+            Operator.객체.Cars obj = new Operator.객체.Cars();
+            Console.WriteLine(obj);
+            obj.Go();
         }
+        
     }
 }

@@ -27,6 +27,7 @@ namespace Operator.널값_다루기
             int? ij = null;
             double? dd = null; //? 사용을 권장한다.
             Console.WriteLine(dd);
+
         }
 
         public void nullDemo3()
