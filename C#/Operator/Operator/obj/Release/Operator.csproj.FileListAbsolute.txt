@@ -1,0 +1,7 @@
+C:\Javascript\my\C#\Operator\Operator\bin\Release\Operator.exe.config
+C:\Javascript\my\C#\Operator\Operator\bin\Release\Operator.exe
+C:\Javascript\my\C#\Operator\Operator\bin\Release\Operator.pdb
+C:\Javascript\my\C#\Operator\Operator\obj\Release\Operator.csproj.AssemblyReference.cache
+C:\Javascript\my\C#\Operator\Operator\obj\Release\Operator.csproj.CoreCompileInputs.cache
+C:\Javascript\my\C#\Operator\Operator\obj\Release\Operator.exe
+C:\Javascript\my\C#\Operator\Operator\obj\Release\Operator.pdb
