@@ -1,0 +1,18 @@
+﻿<Window x:Class="Dinner.Async.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dinner.Async"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="194" Width="416">
+    <Grid>
+        <Button x:Name="btnMakeDinner" Content="식사 준비"
+                HorizontalAlignment="Left" Margin="78,49,0,0" VerticalAlignment="Top" Width="75"
+                Click="btnMakeDinner_Click"/>
+        <Button x:Name="btnWatchingTV" Content="TV 준비"
+                HorizontalAlignment="Left" Margin="278,49,0,0" VerticalAlignment="Top" Width="75"
+                Click="btnWatchingTV_Click"/>
+        <Label x:Name="IblDisplay" Content="" HorizontalAlignment="Left" Margin="88,104,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
