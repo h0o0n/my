@@ -62,11 +62,13 @@
     <Compile Include="부분클래스,메서드체이닝\Bye.cs" />
     <Compile Include="부분클래스,메서드체이닝\Hello.cs" />
     <Compile Include="부분클래스,메서드체이닝\PartialClass.cs" />
+    <Compile Include="비동기메서드\AsyncMain.cs" />
     <Compile Include="상속\InheritanceNote.cs" />
     <Compile Include="생성자\Create.cs" />
     <Compile Include="소멸자\Destructor.cs" />
     <Compile Include="속성사용\NoName.cs" />
     <Compile Include="속성사용\Property.cs" />
+    <Compile Include="스레드\Thread.cs" />
     <Compile Include="알고리즘\알고리즘.cs" />
     <Compile Include="연산자\관계형 연산자.cs" />
     <Compile Include="연산자\논리연산자.cs" />
@@ -89,7 +91,9 @@
     <Compile Include="제어문\제어_조건문.cs" />
     <Compile Include="컬렉션\Collection.cs" />
     <Compile Include="컬렉션\List.cs" />
+    <Compile Include="클래스 라이브러리\Algorithm.cs" />
     <Compile Include="클래스\ClassDemo.cs" />
+    <Compile Include="튜플\Tuple.cs" />
     <Compile Include="특성과리플렉션\AttributeDemo.cs" />
     <Compile Include="필드\FieldDemo.cs" />
     <Compile Include="함수\FunctionNote.cs" />
@@ -100,6 +104,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="객체지향\" />
+    <Folder Include="인메모리 데이터베이스\" />
+    <Folder Include="테스트 프로젝트\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

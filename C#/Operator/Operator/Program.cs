@@ -17,6 +17,8 @@ using Operator.속성사용;
 using Operator.대리자;
 using Operator.이벤트와_이벤트처리기;
 using Operator.상속;
+using Operator.비동기메서드;
+using System.Threading;
 
 namespace Operator
 {
@@ -112,8 +114,20 @@ namespace Operator
             /*Operator.제네릭_클래스.GenericDemo gd = new 제네릭_클래스.GenericDemo();
             gd.main();*/
 
-            Operator.확장메서드.ExtensionMethod em = new 확장메서드.ExtensionMethod();
-            em.main();
+            /*Operator.확장메서드.ExtensionMethod em = new 확장메서드.ExtensionMethod();
+            em.main();*/
+
+            Operator.비동기메서드.AsyncMain am = new 비동기메서드.AsyncMain();
+            Task.Run(() => am.at());
+            Thread.Sleep(10);
+
+            Task.Run(() =>
+            {
+                for (int i = 0; i < 10; i++)
+                {
+                    Console.WriteLine(i + 1);
+                }
+            });
         }
         
     }
