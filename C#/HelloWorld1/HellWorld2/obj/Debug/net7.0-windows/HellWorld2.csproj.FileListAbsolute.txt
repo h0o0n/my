@@ -1,0 +1,15 @@
+C:\Users\khnam\source\repos\HelloWorld1\HellWorld2\bin\Debug\net7.0-windows\HellWorld2.exe
+C:\Users\khnam\source\repos\HelloWorld1\HellWorld2\bin\Debug\net7.0-windows\HellWorld2.deps.json
+C:\Users\khnam\source\repos\HelloWorld1\HellWorld2\bin\Debug\net7.0-windows\HellWorld2.runtimeconfig.json
+C:\Users\khnam\source\repos\HelloWorld1\HellWorld2\bin\Debug\net7.0-windows\HellWorld2.dll
+C:\Users\khnam\source\repos\HelloWorld1\HellWorld2\bin\Debug\net7.0-windows\HellWorld2.pdb
+C:\Users\khnam\source\repos\HelloWorld1\HellWorld2\obj\Debug\net7.0-windows\HellWorld2.csproj.AssemblyReference.cache
+C:\Users\khnam\source\repos\HelloWorld1\HellWorld2\obj\Debug\net7.0-windows\HellWorld2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\khnam\source\repos\HelloWorld1\HellWorld2\obj\Debug\net7.0-windows\HellWorld2.AssemblyInfoInputs.cache
+C:\Users\khnam\source\repos\HelloWorld1\HellWorld2\obj\Debug\net7.0-windows\HellWorld2.AssemblyInfo.cs
+C:\Users\khnam\source\repos\HelloWorld1\HellWorld2\obj\Debug\net7.0-windows\HellWorld2.csproj.CoreCompileInputs.cache
+C:\Users\khnam\source\repos\HelloWorld1\HellWorld2\obj\Debug\net7.0-windows\HellWorld2.dll
+C:\Users\khnam\source\repos\HelloWorld1\HellWorld2\obj\Debug\net7.0-windows\refint\HellWorld2.dll
+C:\Users\khnam\source\repos\HelloWorld1\HellWorld2\obj\Debug\net7.0-windows\HellWorld2.pdb
+C:\Users\khnam\source\repos\HelloWorld1\HellWorld2\obj\Debug\net7.0-windows\HellWorld2.genruntimeconfig.cache
+C:\Users\khnam\source\repos\HelloWorld1\HellWorld2\obj\Debug\net7.0-windows\ref\HellWorld2.dll
