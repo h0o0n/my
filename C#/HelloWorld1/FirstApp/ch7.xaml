@@ -1,0 +1,24 @@
+﻿<Window x:Class="FirstApp.ch7"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FirstApp"
+        mc:Ignorable="d"
+        Title="ch7" Height="450" Width="800">
+    <Grid>
+        <TextBlock>
+            동해물과 <Bold>백두산이</Bold> 마르고 닳도록
+            <LineBreak/>
+            하나님이 보우하사 우리나라만세
+            <Span Background="Red" Foreground="White">우리나라만세</Span>
+            <Hyperlink Name="hyper" TextDecorations="None"
+                       MouseEnter="hyper_MouseEnter"
+                       MouseLeave="hyper_MouseLeave"
+                       RequestNavigate="hyper_RequestNavigate"
+                       NavigateUri="https://naver.com"
+                >
+                Naver</Hyperlink>
+        </TextBlock>
+    </Grid>
+</Window>

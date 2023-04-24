@@ -1,0 +1,32 @@
+﻿<Window x:Class="FirstApp.ch9"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FirstApp"
+        mc:Ignorable="d"
+        Title="ch9" Height="450" Width="800">
+    <StackPanel>
+        <CheckBox Name="cb1">A</CheckBox>
+        <CheckBox Name="cb2" IsChecked="true">B</CheckBox>
+        <CheckBox Name="cb3" Checked="Ch3_Checked" Unchecked="Ch3_Unchecked">
+            <WrapPanel>
+                <TextBlock Name="txt">피프티<Bold>피프티</Bold></TextBlock>
+                <Image Width="25" Source="https://cdn4.iconfinder.com/data/icons/christmas-random/64/17-santa_hat-512.png"/>
+            </WrapPanel>
+        </CheckBox>
+        <CheckBox Name="cb4">
+            <WrapPanel>
+                <Image Width="25" Source="https://cdn4.iconfinder.com/data/icons/christmas-random/64/17-santa_hat-512.png"/>
+                <Label>하이</Label>
+            </WrapPanel>
+        </CheckBox>
+        <CheckBox Name="cbAll"
+                  IsThreeState="True"
+                  Checked="chAll_Checked"
+                  Unchecked="chAll_Unchecked">
+   
+        </CheckBox>
+                   
+    </StackPanel>
+</Window>
