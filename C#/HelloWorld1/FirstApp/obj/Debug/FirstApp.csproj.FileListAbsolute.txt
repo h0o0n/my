@@ -50,3 +50,7 @@ C:\my\C#\HelloWorld1\FirstApp\obj\Debug\ch9.g.cs
 C:\my\C#\HelloWorld1\FirstApp\obj\Debug\ch9.baml
 C:\my\C#\HelloWorld1\FirstApp\obj\Debug\ch10.g.cs
 C:\my\C#\HelloWorld1\FirstApp\obj\Debug\ch10.baml
+C:\my\C#\HelloWorld1\FirstApp\obj\Debug\ch11.g.cs
+C:\my\C#\HelloWorld1\FirstApp\obj\Debug\ch11.baml
+C:\my\C#\HelloWorld1\FirstApp\obj\Debug\ch12.g.cs
+C:\my\C#\HelloWorld1\FirstApp\obj\Debug\ch12.baml
