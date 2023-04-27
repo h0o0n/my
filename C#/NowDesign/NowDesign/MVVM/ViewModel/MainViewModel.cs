@@ -11,12 +11,14 @@ namespace NowDesign.MVVM.ViewModel
     internal class MainViewModel : ObservableObject
     {
 
+        public HomeViewModel HomeVM { get; set; }
+
         private object _currentView;
 
         public object CurrentView
         {
             get { return _currentView; }
-            
+            set
             { 
                 _currentView = value;
                 OnPropertyChanged();
@@ -25,8 +27,9 @@ namespace NowDesign.MVVM.ViewModel
 
         public MainViewModel() 
         { 
-            CurrentView = HomeView
-        }
+            HomeVM = new HomeViewModel();
+            CurrentView = HomeVM;
+        }   
 
     }
 }

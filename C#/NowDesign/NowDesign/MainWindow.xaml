@@ -4,13 +4,16 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NowDesign"
+        xmlns:viewModel="clr-namespace:NowDesign.MVVM.ViewModel"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="920"
         WindowStyle="ToolWindow"
         ResizeMode="NoResize"
-        Background="Transparent"
-        >
+        Background="Transparent" >
 
+    <Window.DataContext>
+        <viewModel:MainViewModel/>
+    </Window.DataContext>
    
     <Border Background="#272537"
             CornerRadius="30">
@@ -63,7 +66,7 @@
             <ContentControl Grid.Row="1"
                             Grid.Column="1"
                             Margin="10"
-                            Content="{Binding currentView }"></ContentControl>
+                            Content="{Binding CurrentView}"></ContentControl>
         </Grid>
 
 
